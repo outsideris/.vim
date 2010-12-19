@@ -1,0 +1,7 @@
+[ui]
+username = Outsider<outsideris@gmail.com>
+merge = vimdiff
+[web]
+push_ssl=False
+allow_push=*
+vimdiff.executable = vim
