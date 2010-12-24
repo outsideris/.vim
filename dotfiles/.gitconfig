@@ -1,0 +1,9 @@
+[user]
+	email = outsideris@gmail.com
+	name = Outsider
+[color]
+	ui = auto
+[alias]
+	ci = commit
+	st = status
+	co = checkout
