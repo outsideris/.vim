@@ -5,3 +5,5 @@ merge = vimdiff
 push_ssl=False
 allow_push=*
 vimdiff.executable = vim
+[extensions]
+prompt = ~/.vim/dotfiles/extensions/hg-prompt/prompt.py
