@@ -4,6 +4,7 @@ alias vi=/Applications/MacVim.app/Contents/MacOS/Vim
 c_cyan=`tput setaf 6`
 c_red=`tput setaf 1`
 c_green=`tput setaf 2`
+c_pink=`tput setaf 5`
 c_sgr0=`tput sgr0`
 
 parse_branch ()
@@ -25,17 +26,23 @@ branch_color ()
    if git rev-parse --git-dir >/dev/null 2>&1
    then
       color=""
-      gitstatus=$(git status 2>/dev/null| tail -n1)
-      case "$gitstatus" in
-         "nothing to commit (working directory clean)" ) color=${c_green};;
-         * ) color=${c_red};;
-      esac
+      if git diff --quiet 2>/dev/null >&2
+      then
+         gitstatus=$(git status 2>/dev/null| tail -n1)
+         case "$gitstatus" in
+            "nothing to commit (working directory clean)" ) color=${c_green};;
+            * ) color=${c_pink};;
+         esac
+      else
+         color=${c_red}
+      fi
    elif hg prompt >/dev/null 2>&1
    then
       color=""
       hgstatus=$(hg prompt {status} 2>/dev/null)
       case "$hgstatus" in
-         "!" | "?" ) color=${c_red};;
+         "!" ) color=${c_red};;
+         "?" ) color=${c_pink};;
          *       ) color=${c_green};;
       esac
    else
