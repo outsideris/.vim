@@ -1,0 +1,8 @@
+alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
+alias vi=/Applications/MacVim.app/Contents/MacOS/Vim
+
+c_sgr0=`tput sgr0`
+
+export PS1='\W\[${c_sgr0}\] \$ '
+
+
