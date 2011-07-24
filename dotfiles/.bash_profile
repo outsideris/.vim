@@ -53,4 +53,4 @@ branch_color ()
 
 export PS1='\u@\h\[${c_sgr0}\]:\W\[${c_sgr0}\] $(parse_branch)\$ '
 
-
+export PATH=$PATH:~/dev-tools/bin
