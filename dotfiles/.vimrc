@@ -33,3 +33,5 @@ filetype plugin on
 au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
 
 call pathogen#infect()
+
+nmap <Leader><Leader> :w<CR>:make! \| botright cwindow<CR>
