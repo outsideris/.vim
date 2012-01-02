@@ -4,7 +4,7 @@ lowercase(){
 
 OS=`lowercase \`uname\``
 
-if [ "{$OS}" == "darwin" ]; then
+if [ "$OS" == "darwin" ]; then
     alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
     alias vi=/Applications/MacVim.app/Contents/MacOS/Vim
 fi
