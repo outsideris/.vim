@@ -59,6 +59,10 @@ branch_color ()
    echo -ne $color
 }
 
+if [ -f ~/.git-completion.sh ]; then
+   . ~/.git-completion.sh
+fi
+
 export PS1='\u@\h\[${c_sgr0}\]:\W\[${c_sgr0}\] $(parse_branch)\$ '
 
 export PATH=$PATH:~/dev-tools/bin
