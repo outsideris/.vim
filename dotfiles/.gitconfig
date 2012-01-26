@@ -7,3 +7,18 @@
 	ci = commit
 	st = status
 	co = checkout
+  log-graph = log --all --graph --decorate
+  log-graph-simple = log --oneline --graph --decorate
+  log-graph-stat = log --oneline --decorate --graph --stat
+  log-refs = log --all --graph --decorate --oneline --simplify-by-decoration --no-merges
+  log-timeline = log --format='%h %an %ar - %s'
+  log-local = log --oneline origin..HEAD
+  log-fetched = log --oneline HEAD..origin/master
+[core]
+	excludesfile = /Users/outsider/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
