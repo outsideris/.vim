@@ -10,59 +10,20 @@ if [ "$OS" == "darwin" ]; then
 fi
 
 c_cyan=`tput setaf 6`
+c_dark=`tput setaf 0`
 c_red=`tput setaf 1`
 c_green=`tput setaf 2`
 c_pink=`tput setaf 5`
 c_sgr0=`tput sgr0`
 
-parse_branch ()
+source ~/.bash/env
+source ~/.bash/aliases
+source ~/.bash/completions
+source ~/.bash/paths
+
+show_repository ()
 {
-   if git rev-parse --git-dir >/dev/null 2>&1
-   then
-      branchname="(git:"$(branch_color)$(git branch 2>/dev/null| sed -n '/^\*/s/^\* //p')${c_sgr0}") "
-   elif hg prompt >/dev/null 2>&1
-   then
-      branchname="(hg:"$(branch_color)$(hg prompt "{branch}" 2>/dev/null)${c_sgr0}") "
-   else
-      return 0
-   fi
-   echo -e $branchname
+  echo -e "$(VCPROMPT_FORMAT=($(tput setaf 3)%s$(tput sgr0):$(tput setaf 7)%h$(tput sgr0)@$(tput setaf 2)%b$(tput setaf 1)%m$(tput setaf 5)%u$(tput sgr0)) vcprompt)"
 }
 
-branch_color ()
-{
-   if git rev-parse --git-dir >/dev/null 2>&1
-   then
-      color=""
-      if git diff --quiet 2>/dev/null >&2
-      then
-         gitstatus=$(git status 2>/dev/null| tail -n1)
-         case "$gitstatus" in
-            "nothing to commit (working directory clean)" ) color=${c_green};;
-            * ) color=${c_pink};;
-         esac
-      else
-         color=${c_red}
-      fi
-   elif hg prompt >/dev/null 2>&1
-   then
-      color=""
-      hgstatus=$(hg prompt {status} 2>/dev/null)
-      case "$hgstatus" in
-         "!" ) color=${c_red};;
-         "?" ) color=${c_pink};;
-         *       ) color=${c_green};;
-      esac
-   else
-      return 0
-   fi
-   echo -ne $color
-}
-
-if [ -f ~/.git-completion.sh ]; then
-   . ~/.git-completion.sh
-fi
-
-export PS1='\u@\h\[${c_sgr0}\]:\W\[${c_sgr0}\] $(parse_branch)\$ '
-
-export PATH=$PATH:~/dev-tools/bin
+export PS1='\[${c_cyan}\]\u\[${c_sgr0}\]@\[${c_dark}\]\h\[${c_sgr0}\]:\w\[${c_sgr0}\] $(show_repository)\n\$ '
