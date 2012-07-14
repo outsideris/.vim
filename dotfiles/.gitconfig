@@ -16,6 +16,7 @@
   log-fetched = log --oneline HEAD..origin/master
 [core]
 	excludesfile = /Users/outsider/.gitignore_global
+	editor = vim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
