@@ -2,4 +2,8 @@ alias ..='cd ..'
 alias ...='cd ..; cd ..'
 alias ....='cd ..; cd ..; cd ..'
 
-alias ll='ls -la'
+alias ll='ls -Gla'
+
+if [ "$OS" == "darwin" ]; then
+  alias ls='ls -G'
+fi
