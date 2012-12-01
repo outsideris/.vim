@@ -7,3 +7,5 @@ alias ll='ls -Gla'
 if [ "$OS" == "darwin" ]; then
   alias ls='ls -G'
 fi
+
+alias slime='open -a "Sublime Text 2"'
