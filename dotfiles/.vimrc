@@ -48,3 +48,8 @@ call pathogen#infect()
 
 " nodejs-errorformat 커맨드
 nmap <Leader><Leader> :w<CR>:make! \| botright cwindow<CR>
+
+" vim-powerline
+language en_US.UTF-8
+let g:Powerline_symbols = 'fancy'
+set laststatus=2
