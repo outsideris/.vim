@@ -7,12 +7,12 @@
 	ci = commit
 	st = status
 	co = checkout
-  log-graph = log --all --graph --decorate
-  log-graph-simple = log --oneline --graph --decorate
-  log-graph-stat = log --oneline --decorate --graph --stat
-  log-graph-detail = log --decorate --stat --graph --pretty=format:"%d %Cgreen%h%Creset (%ar - %Cred%an%Creset), %s%n"
-  log-refs = log --all --graph --decorate --oneline --simplify-by-decoration --no-merges
-  log-timeline = log --format='%h %an %ar - %s'
+  graph = log --all --graph --decorate --oneline --simplify-by-decoration --no-merges
+  graph-detail = log --all --graph --decorate
+  graph-simple = log --oneline --graph --decorate
+  graph-stat = log --oneline --graph --decorate --stat
+  graph-diff = log --decorate --stat --graph --pretty=format:\"%d %Cgreen%h%Creset (%ar - %Cred%an%Creset), %s%n\"
+  graph-time = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
   log-local = log --oneline origin..HEAD
   log-fetched = log --oneline HEAD..origin/master
 [core]
