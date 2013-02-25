@@ -7,7 +7,7 @@
 	ci = commit
 	st = status
 	co = checkout
-  graph = log --all --graph --decorate --oneline --simplify-by-decoration --no-merges
+  graph = log --all --graph --decorate --oneline
   graph-detail = log --all --graph --decorate
   graph-simple = log --oneline --graph --decorate
   graph-stat = log --oneline --graph --decorate --stat
