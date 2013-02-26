@@ -1,11 +1,10 @@
-/*
- * grunt
- * http://gruntjs.com/
- *
- * Copyright (c) 2012 "Cowboy" Ben Alman
- * Licensed under the MIT license.
- * https://github.com/gruntjs/grunt/blob/master/LICENSE-MIT
- */
+// # Download jQuery files 
+// donwload jquery.js or minified jquery.js you specify version
+//
+// Copyright (c) 2013 JeongHoon Byun aka "Outsider", <http://blog.outsider.ne.kr/>
+// Licensed under the MIT license.
+// <http://outsider.mit-license.org/>
+//
 
 var path = require('path')
   , fs = require('fs')
@@ -15,18 +14,17 @@ var path = require('path')
 exports.description = 'Download jquery file';
 
 // Template-specific notes to be displayed before question prompts.
-exports.notes = 'Downlode jquery you specify';
+exports.notes = 'Download jquery you specify';
 
 // Any existing file or directory matching this wildcard will cause a warning.
-exports.warnOn = 'jquery.*.js';
-exports.warnOn = '*/jquery.*.js';
+exports.warnOn = '**/jquery.*.js';
 
 // The actual init template.
 exports.template = function(grunt, init, done) {
 
-  var LASTEST_VERSION = '1.8.3';
+  var LASTEST_VERSION = '1.9.1';
 
-  grunt.helper('prompt', {}, [
+  init.process({}, [
     // Prompt for these values.
     {
       name: 'version',
@@ -50,7 +48,7 @@ exports.template = function(grunt, init, done) {
     props.targetPath = path.relative('./', props.targetPath);
 
     // initialize constants
-    var JQUERYPATH = path.join(__dirname, 'jq', 'root', props.version + (props.min ? '-min' : ''));
+    var JQUERYPATH = path.join(__dirname, 'root', props.version + (props.min ? '-min' : ''));
     var JQUERYFILE = 'jquery-' + props.version + (props.min ? '.min' : '') + '.js'
 
     fs.exists(JQUERYPATH, function(exists) {
@@ -83,22 +81,23 @@ exports.template = function(grunt, init, done) {
     };
 
     var getJQueryFile = function(callback) {
-      http.get('http://code.jquery.com/' + JQUERYFILE, function(response) {
-        if (response.statusCode === 200) {
-          fs.mkdir(JQUERYPATH, function(err) {
-            var file = fs.createWriteStream(JQUERYPATH + '/' + JQUERYFILE);
-            response.on('data', function(chunk) {
-              file.write(chunk);
-            }).on('end', function() {
-              file.end();
-              callback();
-            });
+      fs.mkdir(JQUERYPATH, function(err) {
+        http.get('http://code.jquery.com/' + JQUERYFILE, function(response) {
+          var file = fs.createWriteStream(JQUERYPATH + '/' + JQUERYFILE);
+          response.on('data', function(chunk) {
+            file.write(chunk);
+          }).on('end', function() {
+            file.end();
+            callback();
           });
-        } else {
-          grunt.log.writeln().fail("Aborted due to can't find the jQuery file. Check the version - " + props.version);
-        }
+
+          if (err || response.statusCode !== 200) {
+            fs.rmdir(JQUERYPATH);
+            grunt.log.writeln().fail("Aborted due to can't find the jQuery file. Check the version - " + props.version);
+          }
+        });
       });
-    }
+    };
   });
 
 };

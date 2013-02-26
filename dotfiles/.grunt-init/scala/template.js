@@ -1,11 +1,8 @@
-/*
- * grunt
- * http://gruntjs.com/
- *
- * Copyright (c) 2012 "Cowboy" Ben Alman
- * Licensed under the MIT license.
- * https://github.com/gruntjs/grunt/blob/master/LICENSE-MIT
- */
+// # skeleton files for Scala project 
+//
+// Copyright (c) 2013 JeongHoon Byun aka "Outsider", <http://blog.outsider.ne.kr/>
+// Licensed under the MIT license.
+// <http://outsider.mit-license.org/>
 
 // Basic template description.
 exports.description = 'Create skeleton with sbt for Scala project.';
@@ -14,7 +11,7 @@ exports.description = 'Create skeleton with sbt for Scala project.';
 exports.notes = 'added sbt setting files and directories'
 
 // Any existing file or directory matching this wildcard will cause a warning.
-exports.warnOn = '*';
+exports.warnOn = '**/*';
 
 // The actual init template.
 exports.template = function(grunt, init, done) {
@@ -22,9 +19,9 @@ exports.template = function(grunt, init, done) {
   var LASTEST_SCALA_VERSION = "2.10.0"
   var LASTEST_SBT_VERSION = "0.12.0"
 
-  grunt.helper('prompt', {}, [
-    grunt.helper('prompt_for', 'name'),
-    grunt.helper('prompt_for', 'version'),
+  init.process({}, [
+    init.prompt('name'),
+    init.prompt('version'),
     {
       name: 'scalaversion',
       message: 'What scala version are you underlying?',
