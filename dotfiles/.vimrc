@@ -41,7 +41,7 @@ filetype indent on  "  파일 종류에 따라 구문을 강조
 "set lcs=tab:\|\ 
 
 filetype plugin on
-au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
+"au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
 
 " pathongen 사용
 call pathogen#infect()
