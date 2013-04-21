@@ -51,3 +51,6 @@ cd() {
   original_cd "$*"
   tabname $(basename $(pwd))
 }
+
+export CLICOLOR=1
+export LSCOLORS=DxFxCxGxBxegedabagaced
