@@ -30,3 +30,5 @@
 	user = outsideris
 [ghi]
 	token =
+[init]
+	templatedir = ~/.git_template
