@@ -1,5 +1,4 @@
 // # git repository template for grunt-init
-// default files for git repository such like .gitignore
 //
 // Copyright (c) 2013 JeongHoon Byun aka "Outsider", <http://blog.outsider.ne.kr/>
 // Licensed under the MIT license.
@@ -23,6 +22,7 @@ exports.template = function(grunt, init, done) {
   
   init.process({}, [
     // Prompt for these values.
+    init.prompt('name')
   ], function(err, props) {
     // Files to copy (and process).
     var files = init.filesToCopy(props);

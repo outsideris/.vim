@@ -9,10 +9,19 @@ module.exports = function(grunt) {
       options: {
         jshintrc: '.jshintrc'
       },
-      front: {
-        src: ['Gruntfile.js']
+      gruntfile: {
+        src: 'Gruntfile.js'
       }
-    }
+    },
+    connect: {
+      server: {
+        options: {
+          port: 9999,
+          base: ''
+        }
+      }
+    },
+    watch: {}
   });
 
   // These plugins provide necessary tasks.
