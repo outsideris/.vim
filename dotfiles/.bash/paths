@@ -1,1 +1,1 @@
-export PATH=$PATH:~/dev-tools/bin:~/.bash/bin:~/.rbenv/bin
+export PATH=/usr/local/bin/:$PATH:~/dev-tools/bin:~/.bash/bin:~/.rbenv/bin
