@@ -54,3 +54,5 @@ cd() {
 
 export CLICOLOR=1
 export LSCOLORS=DxFxCxGxBxegedabagaced
+
+set -o vi
