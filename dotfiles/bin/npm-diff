@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+
+#
+# npm-diff(1)
+#
+# MIT licensed
+# (c) 2014 Segment.io <friends@segment.io>
+#
+
+set -e
+
+# arguments
+
+if [[ $# != 3 ]]; then
+  echo "Usage: npm-diff <module> <versionA> <versionB>"
+  exit 1
+fi
+
+module=$1
+a=$2
+b=$3
+
+# work dir
+
+work=/tmp/$RANDOM
+mkdir $work
+cd $work
+
+# download
+
+download(){
+  version=$1
+  mkdir $version
+  cd $version
+
+  user=""
+  if [ "$(npm config get always-auth)" == "true" ]; then
+    user="--user $(cat ~/.npmrc | grep _auth | cut -d' ' -f3 | base64 --decode)"
+  fi
+
+  url=$(npm show $module@$version dist.tarball 2>/dev/null)
+  curl --fail --silent --insecure $user $url | tar -xz --strip 1
+  if [[ ${PIPESTATUS[0]} != 0 ]]; then
+    echo "Unknown version: $module@$1"
+    exit 1
+  fi
+}
+
+download $a &
+download $b &
+
+for job in `jobs -p`; do wait $job || exit 1; done
+
+# diff
+
+diff \
+  --recursive \
+  --unified \
+  --exclude test \
+  --exclude Makefile \
+  $a $b \
+  | egrep -v "\"readme\"|\"_id\"|\"_from\"|\"_resolved\""
+
+# cleanup
+
+rm -Rf $work
+
