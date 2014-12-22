@@ -24,8 +24,6 @@ show_repository ()
 
 export PS1='\[${c_cyan}\]\u\[${c_lred}\]@\[${c_grey}\]\h\[${c_sgr0}\]:\w\[${c_sgr0}\] $(show_repository)\n\[${c_yellow}\]⚡ \[${c_sgr0}\]'
 
-PATH=$PATH:~/bin:~/bin/lib/node.js/bin
-
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 function tabname {

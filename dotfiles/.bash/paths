@@ -1,2 +1,2 @@
 export M2_HOME=/Users/outsider/bin/lib/maven/current
-export PATH=/usr/local/bin/:$PATH:~/dev-tools/bin:~/.bash/bin:~/.rbenv/bin
+export PATH=/usr/local/bin/:$PATH:~/.bash/bin:~/bin:~/bin/lib/node.js/bin:~/.rbenv/bin
