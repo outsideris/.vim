@@ -36,3 +36,4 @@
 	keepBackup = true
 [pager]
   diff = diff-highlight | less
+  log = diff-highlight | less
