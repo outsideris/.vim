@@ -2,13 +2,6 @@ lowercase(){
     echo "$1" | sed "y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/"
 }
 
-OS=`lowercase \`uname\``
-
-if [ "$OS" == "darwin" ]; then
-    alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
-    alias vi=/Applications/MacVim.app/Contents/MacOS/Vim
-fi
-
 c_cyan=`tput setaf 6`
 c_dark=`tput setaf 0`
 c_grey=`tput setaf 8`
