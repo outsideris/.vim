@@ -45,3 +45,5 @@ cd() {
 
 export CLICOLOR=1
 export LSCOLORS=DxFxCxGxBxegedabagaced
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash #fzf
