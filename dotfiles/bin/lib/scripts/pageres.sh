@@ -11,4 +11,5 @@ https://github.com/angular-ui/AngularJS-Atom \
 http://stackoverflow.com/users/518864/outsider \
 https://twitter.com/outsideris \
 http://www.slideshare.net/rockdoli/presentations \
+https://atom.io/packages/angularjs \
 --delay 5 1366x3000 --filename '<%= date %>-<%= url %>'
