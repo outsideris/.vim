@@ -11,3 +11,12 @@ fi
 alias slime='open -a "Sublime Text 2"'
 alias serv='python -m SimpleHTTPServer 8080'
 alias pf='open -a "Path Finder"'
+
+function h() {
+  if [ -z "$1" ]
+  then
+    history
+  else
+    history | grep "$@"
+  fi
+}
