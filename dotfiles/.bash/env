@@ -1,3 +1,6 @@
+HISTSIZE=3000
+HISTFILESIZE=6000
+
 export POW_DOMAINS=dev,test
 #export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
 export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
