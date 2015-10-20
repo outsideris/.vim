@@ -16,6 +16,9 @@
   graph-time = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
   log-local = log --oneline origin..HEAD
   log-fetched = log --oneline HEAD..origin/master
+  # https://gist.github.com/gnarf/5406589
+  pr = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+  pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
 [core]
 	excludesfile = /Users/outsider/.gitignore_global
 	editor = vim
