@@ -1,6 +1,7 @@
 [user]
 	email = outsideris@gmail.com
 	name = Outsider
+	signingkey = 131EA9B1
 [color]
 	ui = auto
 [alias]
@@ -49,3 +50,5 @@
 	required = true
 	clean = git media clean %f
 	smudge = git media smudge %f
+[commit]
+	gpgsign = true
