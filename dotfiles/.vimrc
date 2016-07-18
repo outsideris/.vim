@@ -22,6 +22,7 @@ set incsearch    		" 키워드를 입력할 때마다 검색하는 점진 검색
 set backspace=eol,start,indent "  줄의 끝, 시작, 들여쓰기에서 백스페이스를 사용하면 이전줄과 연결됨
 set history=1000    " vi 편집기록을 1,000까지 기억함
 set undolevels=1000 " 1000 undos
+set paste
 
 " backup
 set backup
