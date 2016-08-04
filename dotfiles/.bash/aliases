@@ -20,3 +20,5 @@ function h() {
     history | grep "$@"
   fi
 }
+
+alias nsolid-env='source /usr/local/nsolid/nsolid-env'
