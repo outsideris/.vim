@@ -22,3 +22,6 @@ function h() {
 }
 
 alias nsolid-env='source /usr/local/nsolid/nsolid-env'
+
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+alias redis-run='docker run -d -p 6379:6379 --name redis redis'
