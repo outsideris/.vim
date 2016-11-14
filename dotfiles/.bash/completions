@@ -1,3 +1,4 @@
 source ~/.bash/completion_scripts/.git-completion.sh
 source ~/.bash/completion_scripts/.docker-completion.sh
 source ~/.bash/completion_scripts/.apex-completion.sh
+source ~/.bash/completion_scripts/.npm-completion.sh
