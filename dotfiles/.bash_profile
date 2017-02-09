@@ -47,3 +47,4 @@ export LSCOLORS=DxFxCxGxBxegedabagaced
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash #fzf
 
 eval "$(rbenv init -)"
+eval "$(direnv hook bash)"
