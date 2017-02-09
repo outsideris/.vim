@@ -48,3 +48,5 @@ export LSCOLORS=DxFxCxGxBxegedabagaced
 
 eval "$(rbenv init -)"
 eval "$(direnv hook bash)"
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
