@@ -86,7 +86,7 @@ def helper(*args, **kwargs):
 def systems(*args, **kwargs):
     """Prints all available systems to stdout."""
     for system in SYSTEMS:
-        print system.func_name
+        print(system.func_name)
     sys.exit(0)
 
 
@@ -108,7 +108,7 @@ def version(*args):
     """
     Convenience function for printing a version number.
     """
-    print 'vcprompt %s' % '.'.join(map(str, __version__))
+    print('vcprompt %s' % '.'.join(map(str, __version__)))
     sys.exit(0)
 
 
@@ -666,6 +666,6 @@ def svn(options):
 if __name__ == '__main__':
     prompt = main()
     if prompt:
-        print prompt
+        print(prompt)
     else:
         sys.exit(1)
