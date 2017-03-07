@@ -1,2 +1,2 @@
 export M2_HOME=/Users/outsider/bin/lib/maven/current
-export PATH=/usr/local/bin:$PATH:~/.bash/bin:~/bin:~/bin/lib/node.js/bin:~/.rvm/bin:~/bin/go/bin:~/bin/lib/go/lib/bin
+export PATH=$PYENV_ROOT/bin:/usr/local/bin/:$PATH:~/.bash/bin:~/bin:~/bin/lib/node.js/bin:~/.rvm/bin:~/bin/go/bin:~/bin/lib/go/lib/bin

@@ -47,6 +47,7 @@ export LSCOLORS=DxFxCxGxBxegedabagaced
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash #fzf
 
 eval "$(rbenv init -)"
+eval "$(pyenv init -)"
 eval "$(direnv hook bash)"
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"

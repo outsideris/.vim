@@ -9,3 +9,4 @@ export EDITOR='vim'
 export DEBUG=*
 export GOROOT=$HOME/bin/go
 export GOPATH=$HOME/bin/lib/go/lib
+export PYENV_ROOT="$HOME/.pyenv"
