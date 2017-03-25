@@ -8,5 +8,5 @@ export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export EDITOR='vim'
 export DEBUG=*
 export GOROOT=$HOME/bin/go
-export GOPATH=$HOME/bin/lib/go/lib
+export GOPATH=$HOME/projects/go
 export PYENV_ROOT="$HOME/.pyenv"
