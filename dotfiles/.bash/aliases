@@ -28,3 +28,7 @@ alias docker-pg='docker run -d --name postgres -p 5432:5432 -e POSTGRES_PASSWORD
 alias docker-pgclient="docker run -it --link postgres:postgres --rm postgres sh -c 'exec psql -h \"\$POSTGRES_PORT_5432_TCP_ADDR\" -p \"\$POSTGRES_PORT_5432_TCP_PORT\" -U postgres'"
 alias docker-mysql='docker run -d -p 3306:3306 —name mysql -e MYSQL_ROOT_PASSWORD=password mysql'
 alias docker-mongo='docker run -d -p 27017:27017 —name mongo mongo'
+
+# chrome
+alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+alias chrome-canary='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary'
