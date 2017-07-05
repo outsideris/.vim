@@ -1,0 +1,18 @@
+#!/bin/sh
+#
+# Github won't permit files larger than 100MB (https://help.github.com/articles/working-with-large-files);
+# don't wait to realize this until you try to push a bunch of commits.
+
+git diff --cached --name-only |
+  while read file
+  do
+    if [ $(du -m $file |cut -f 1) -ge 100 ]
+    then
+      echo Files too big: $file and maybe others
+      exit 1
+    fi
+  done
+
+# Don't add any other commands here. The 'exit' above will only exit the
+# pipeline, and the exit status of the entire script is the exit status of the
+# final command. I hate sh/bash.
