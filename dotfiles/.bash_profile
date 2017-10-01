@@ -48,6 +48,7 @@ export LSCOLORS=DxFxCxGxBxegedabagaced
 
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 eval "$(direnv hook bash)"
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
