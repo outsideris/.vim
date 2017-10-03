@@ -24,6 +24,14 @@ show_repository ()
 
 export PS1='\[${c_cyan}\]\u\[${c_lred}\]@\[${c_grey}\]\h\[${c_sgr0}\]:\w\[${c_sgr0}\] $(show_repository)\n\[${c_yellow}\]⚡ \[${c_sgr0}\]'
 
+show_virtual_env() {
+  if [ -n "$VIRTUAL_ENV" ]; then
+    echo "($(basename $VIRTUAL_ENV))"
+  fi
+}
+
+PS1='$(show_virtual_env)'$PS1
+
 function tabname {
   printf "\e]1;$1\a"
 }

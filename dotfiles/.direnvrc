@@ -1,0 +1,15 @@
+use_python() {
+  local python_root=$HOME/.pyenv/versions/$1
+  load_prefix "$python_root"
+  if [[ -x "$python_root/bin/python3" ]]; then
+    layout python3 "$python_root/bin/python3"
+  else
+    layout python "$python_root/bin/python"
+  fi
+}
+
+layout_virtualenv() {
+  local venv_path="$1"
+  source ${venv_path}/bin/activate
+}
+
