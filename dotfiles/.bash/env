@@ -10,3 +10,4 @@ export DEBUG=*
 export GOROOT=$HOME/bin/go
 export GOPATH=$HOME/projects/go
 export PYENV_ROOT="$HOME/.pyenv"
+export PYENV_VERSION=3.6.3:2.7.14
