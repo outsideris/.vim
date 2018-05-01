@@ -22,7 +22,7 @@ show_repository ()
   echo -e "$(VCPROMPT_FORMAT=($(tput setaf 3)%s$(tput sgr0):$(tput setaf 5)%h$(tput sgr0)@$(tput setaf 2)%b$(tput setaf 1)%m$(tput setaf 5)%u$(tput sgr0)) vcprompt)"
 }
 
-export PS1='\[${c_cyan}\]\u\[${c_lred}\]@\[${c_grey}\]\h\[${c_sgr0}\]:\w\[${c_sgr0}\] $(show_repository)\n\[${c_yellow}\]⚡ \[${c_sgr0}\]'
+export PS1='\[${c_cyan}\]\u\[${c_lred}\]@\[${c_grey}\]\h\[${c_sgr0}\]:\w\[${c_sgr0}\] $(show_repository)\n⚡ \[${c_sgr0}\]'
 
 show_virtual_env() {
   if [ -n "$VIRTUAL_ENV" ]; then
