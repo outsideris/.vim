@@ -21,7 +21,6 @@ function h() {
   fi
 }
 
-alias nsolid-env='source /usr/local/nsolid/nsolid-env'
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias docker-redis='docker run -d -p 6379:6379 --name redis redis'
 alias docker-pg='docker run -d --name postgres -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres postgres'
