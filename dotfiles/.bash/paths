@@ -1,2 +1,2 @@
 export M2_HOME=/Users/outsider/bin/lib/maven/current
-export PATH=/usr/local/bin/:$PATH:~/.bash/bin:~/bin:~/bin/lib/node.js/bin:~/bin/lib/go/current/bin:$GOPATH/bin
+export PATH=/usr/local/bin/:$PATH:~/.bash/bin:~/bin:~/bin/lib/node.js/bin:~/bin/lib/golang/current/bin:$GOPATH/bin

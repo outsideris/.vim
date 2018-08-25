@@ -6,5 +6,6 @@ export POW_DOMAINS=dev,test
 #export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export EDITOR='vim'
-export GOPATH=$HOME/projects/go
+export GOROOT=$HOME/bin/lib/golang/current
+export GOPATH=$HOME/projects/golang
 export PYENV_ROOT="$HOME/.pyenv"
