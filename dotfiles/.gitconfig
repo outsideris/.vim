@@ -23,7 +23,7 @@
   pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
 [core]
 	excludesfile = /Users/outsider/.gitignore_global
-	editor = vim
+	editor = vi
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -53,3 +53,5 @@
 	smudge = git media smudge %f
 [commit]
 	gpgsign = true
+[includeIf "gitdir:~/temp/odkmedia/"]
+  path = .gitconfig-work
