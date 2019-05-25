@@ -35,7 +35,7 @@
 [github]
 	user = outsideris
 [ghi]
-	token =
+	token = !security find-internet-password -a outsideris -s github.com -l 'ghi token' -w
 [init]
 	templatedir = ~/.git_template
 [mergetool]
