@@ -53,5 +53,5 @@
 	smudge = git media smudge %f
 [commit]
 	gpgsign = true
-[includeIf "gitdir:~/temp/odkmedia/"]
+[includeIf "gitdir:~/odkmedia/"]
   path = .gitconfig-work
