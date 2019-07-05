@@ -36,21 +36,4 @@ colorscheme desert  "  vi 색상 테마를 evening로 설정
 syntax on 		    	"  구문강조 기능 사용
 
 filetype indent on  "  파일 종류에 따라 구문을 강조
-
-" 탭사용시 | 로 표시함
-"set list
-"set lcs=tab:\|\ 
-
 filetype plugin on
-"au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
-
-" pathongen 사용
-call pathogen#infect()
-
-" nodejs-errorformat 커맨드
-nmap <Leader><Leader> :w<CR>:make! \| botright cwindow<CR>
-
-" vim-powerline
-language en_US.UTF-8
-let g:Powerline_symbols = 'fancy'
-set laststatus=2
