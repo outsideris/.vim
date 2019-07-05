@@ -58,4 +58,6 @@ eval "$(rbenv init -)"
 eval "$(pyenv init -)"
 eval "$(direnv hook bash)"
 
+source ~/bin/lib/bash-wakatime/bash-wakatime.sh
+
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
