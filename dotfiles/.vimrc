@@ -1,5 +1,4 @@
-set nocompatible    " 오리지날vi랑 호환안함 
-"set autoindent 		" 자동 들여쓰기
+set nocompatible
 set cindent 	     	" C 프로그래밍을 할때 자동 들여쓰기
 set smartindent   	" 좀더 똑똑한 들여쓰기
 set wrap 			 
@@ -31,9 +30,22 @@ set directory=~/.vim/backup/tmp
 
 set cul                                           " highlight current line
 hi CursorLine term=none cterm=none ctermbg=3      " adjust color
-
 colorscheme desert  "  vi 색상 테마를 evening로 설정
 syntax on 		    	"  구문강조 기능 사용
 
-filetype indent on  "  파일 종류에 따라 구문을 강조
-filetype plugin on
+filetype off
+
+" Vundle
+set rtp+=~/.vim/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-airline/vim-airline'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
+Plugin 'ctrlpvim/ctrlp.vim'
+
+call vundle#end()
+filetype plugin indent on
+

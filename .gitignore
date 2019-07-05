@@ -5,3 +5,4 @@
 .netrwhist
 backup/
 *.cache
+bundle/
