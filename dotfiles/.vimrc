@@ -45,6 +45,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'wakatime/vim-wakatime'
 
 call vundle#end()
 filetype plugin indent on
