@@ -1,0 +1,2 @@
+autoload -U +X compinit && compinit
+source <(kubectl completion zsh)

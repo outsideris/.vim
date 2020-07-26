@@ -1,0 +1,21 @@
+alias ..='cd ..'
+alias ...='cd ..; cd ..'
+alias ....='cd ..; cd ..; cd ..'
+
+alias ll='ls -Glah'
+
+alias pf='open -a "Path Finder"'
+
+function h() {
+  if [[ -z $1 ]]
+  then
+    history
+  else
+    history | grep "$@"
+  fi
+}
+
+alias cat='bat'
+alias ping='prettyping --nolegend'
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+
