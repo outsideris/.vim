@@ -1,8 +1,0 @@
-HISTSIZE=3000
-HISTFILESIZE=6000
-
-export JAVA_HOME=`/usr/libexec/java_home -v 12`
-export EDITOR='vim'
-export GOROOT=$HOME/bin/lib/golang/current
-export GOPATH=$HOME/projects/golang
-export PYENV_ROOT="$HOME/.pyenv"
