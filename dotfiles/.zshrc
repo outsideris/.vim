@@ -61,6 +61,7 @@ zinit light-mode for \
 zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
+zinit light sobolevn/wakatime-zsh-plugin
 
 ### End of Zinit's installer chunk
 
