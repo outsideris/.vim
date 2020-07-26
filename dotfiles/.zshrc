@@ -11,8 +11,6 @@ source ~/.zsh/paths
 source ~/.zsh/completions
 
 source ~/projects/system/powerlevel10k/powerlevel10k.zsh-theme
-# source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
-# PS1='$(kube_ps1)'$PS1
 
 # rbenv
 eval "$(rbenv init -)"
