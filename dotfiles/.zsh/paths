@@ -1,1 +1,1 @@
-export PATH=/usr/local/bin/:$PATH:~/.bash/bin:~/bin:~/bin/lib/node.js/bin:~/bin/lib/golang/current/bin:$GOPATH/bin:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/
+export PATH=/usr/local/bin:$PATH:~/.bash/bin:~/bin:~/bin/lib/node.js/bin:~/bin/lib/golang/current/bin:$GOPATH/bin:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/
