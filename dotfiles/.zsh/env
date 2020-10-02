@@ -7,3 +7,4 @@ export EDITOR='vim'
 export GOROOT=$HOME/bin/lib/golang/current
 export GOPATH=$HOME/projects/golang
 export PYENV_ROOT="$HOME/.pyenv"
+export AWS_PROFILE=tf
