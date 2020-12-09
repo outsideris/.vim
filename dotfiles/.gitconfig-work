@@ -1,9 +1,7 @@
 [user]
-	email = jeonghoon@odkmedia.net
+	email = wayland@daangn.net
 	name = Outsider
 [alias]
 	ci = commit
 [github]
 	user = outsider-biz
-[ghi]
-	token =
