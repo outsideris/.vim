@@ -1,7 +1,8 @@
 [user]
 	email = wayland@daangn.net
-	name = Outsider
+	name = Wayland
+	signingkey = 52A25BE6
 [alias]
-	ci = commit
+	ci = commit --signoff
 [github]
 	user = outsider-biz
