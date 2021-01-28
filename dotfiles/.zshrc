@@ -62,6 +62,3 @@ zinit light zsh-users/zsh-completions
 zinit light sobolevn/wakatime-zsh-plugin
 
 ### End of Zinit's installer chunk
-
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /Users/outsider/bin/terraform terraform
