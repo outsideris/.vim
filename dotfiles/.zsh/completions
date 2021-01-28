@@ -2,3 +2,5 @@ autoload -U +X bashcompinit && bashcompinit
 autoload -U +X compinit && compinit
 source <(kubectl completion zsh)
 complete -o nospace -C /Users/outsider/bin/terraform terraform
+source completions-scripts/kubectx.bash
+source completions-scripts/kubens.bash
