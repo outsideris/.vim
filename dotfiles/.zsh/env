@@ -4,6 +4,7 @@ HISTFILE=~/.zsh_history
 
 export JAVA_HOME=`/usr/libexec/java_home -v 15`
 export EDITOR='vim'
+export FPATH=$HOME/.zsh/completions-scripts:$FPATH
 export PYENV_ROOT="$HOME/.pyenv"
 export GOPATH=$HOME/go
 export KUBECONFIG=$HOME/.kube/config:$HOME/.kube/FILES
