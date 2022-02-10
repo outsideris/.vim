@@ -1,5 +1,7 @@
+fpath=(~/.zsh/completions-scripts $fpath)
+
 autoload -U +X bashcompinit && bashcompinit
-autoload -U +X compinit && compinit
+autoload -U +X compinit && compinit -i
 source <(kubectl completion zsh)
 complete -o nospace -C ~/bin/terraform terraform
 source ~/.zsh/completions-scripts/kubectx.bash
