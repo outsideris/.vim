@@ -18,5 +18,6 @@ function h() {
 alias cat='bat'
 alias ping='prettyping --nolegend'
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+alias curl='curl -w "\n"'
 alias kc='kubectl -n '
 
