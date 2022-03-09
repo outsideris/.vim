@@ -1,1 +1,1 @@
-export PATH=~/bin:~/bin/lib/node.js/bin:~/bin/lib/golang/current/bin:$GOPATH/bin:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/:/opt/homebrew/bin:/usr/local/bin:${KREW_ROOT:-$HOME/.krew}/bin:~/Library/Python/2.7/bin:$PATH
+export PATH=~/bin:/opt/homebrew/bin:/opt/homebrew/opt/curl/bin:~/bin/lib/golang/current/bin:$GOPATH/bin:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/:/usr/local/bin:${KREW_ROOT:-$HOME/.krew}/bin:~/Library/Python/2.7/bin:$PATH
