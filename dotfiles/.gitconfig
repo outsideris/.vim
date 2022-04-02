@@ -34,6 +34,7 @@
 	keepBackup = true
 [diff]
   colorMoved = default
+  compactionHeuristic = true
 [interactive]
   diffFilter = delta --color-only
 [delta]
