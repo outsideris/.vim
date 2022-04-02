@@ -22,12 +22,7 @@
 [core]
 	excludesfile = /Users/outsider/.gitignore_global
 	editor = vi
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+	pager = delta
 [merge]
 	conflictstyle = diff3
 [github]
@@ -37,9 +32,12 @@
 	defaultBranch = main
 [mergetool]
 	keepBackup = true
-[pager]
-  diff = diff-highlight | less
-  log = diff-highlight | less
+[diff]
+  colorMoved = default
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  navigate = true
 [filter "lfs"]
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
