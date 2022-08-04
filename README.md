@@ -1,3 +1,3 @@
-my .vim setting
+my dotfiles
 =====================
 
