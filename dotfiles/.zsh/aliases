@@ -15,6 +15,7 @@ function h() {
   fi
 }
 
+alias da='direnv allow'
 alias cat='bat'
 alias ping='prettyping --nolegend'
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
