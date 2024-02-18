@@ -24,7 +24,11 @@
 	editor = vi
 	pager = delta
 [merge]
-	conflictstyle = diff3
+	conflictstyle = zdiff3
+[reabse]
+  autosquash = true
+[rerere]
+  enabled = true
 [github]
 	user = outsideris
 [init]
@@ -35,6 +39,7 @@
 [diff]
   colorMoved = default
   compactionHeuristic = true
+  algorithm = histogram
 [interactive]
   diffFilter = delta --color-only
 [delta]
